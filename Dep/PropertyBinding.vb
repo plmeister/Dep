@@ -2,6 +2,7 @@
 Imports System.Reflection.IntrospectionExtensions
 
 Public Class PropertyBinding
+    <System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1009:DeclareEventHandlersCorrectly", Justification:="no need for an eventargs parameter")>
     Public Event TargetExpiry(sender As Object)
 
     Protected Sub TargetHasExpired()
