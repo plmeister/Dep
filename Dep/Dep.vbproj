@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="Bindings.vb" />
     <Compile Include="Computed.vb" />
+    <Compile Include="Factory.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="Observable.vb" />
     <Compile Include="PropertyBinding.vb" />
