@@ -8,8 +8,10 @@
             Return _value
         End Get
         Set(value As T)
-            _value = value
-            ValueChanged()
+            If value.GetHashCode() <> _value.GetHashCode() Then
+                _value = value
+                ValueChanged()
+            End If
         End Set
     End Property
 
