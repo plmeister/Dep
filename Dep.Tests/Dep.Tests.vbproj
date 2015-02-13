@@ -67,6 +67,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputedTests.vb" />
     <Compile Include="DummyClass.vb" />
     <Compile Include="DummyNotify.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

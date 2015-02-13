@@ -39,5 +39,36 @@
         Assert.AreEqual(src.ObservableProperty.Value, dst.Value)
     End Sub
 
+    <Test> Public Sub Binding_Execute_Init()
+        Dim a As New Dep.Observable(Of String)("a")
+        Dim b As New Dep.Observable(Of String)("b")
 
+        Dim executed As Boolean = False
+        Dim oldExecute = Bindings.Execute
+        Bindings.Execute = Sub(ac As Action)
+                               executed = True
+                               ac()
+                           End Sub
+
+        Dep.Bindings.Add(a, b)
+        Bindings.Execute = oldExecute
+        Assert.True(executed)
+    End Sub
+
+    <Test> Public Sub Binding_Execute_Change()
+        Dim a As New Dep.Observable(Of String)("a")
+        Dim b As New Dep.Observable(Of String)("b")
+
+        Dim executed As Boolean = False
+        Dim oldExecute = Bindings.Execute
+
+        Dep.Bindings.Add(a, b)
+        Bindings.Execute = Sub(ac As Action)
+                               executed = True
+                               ac()
+                           End Sub
+        a.Value = "z"
+        Bindings.Execute = oldExecute
+        Assert.True(executed)
+    End Sub
 End Class
