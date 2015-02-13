@@ -56,8 +56,8 @@
     End Sub
 
     <Test> Public Sub Binding_Execute_Change()
-        Dim a As New Dep.Observable(Of String)("a")
-        Dim b As New Dep.Observable(Of String)("b")
+        Dim a = Dep.Factory.Observable("a")
+        Dim b = Dep.Factory.Observable("b")
 
         Dim executed As Boolean = False
         Dim oldExecute = Bindings.Execute
