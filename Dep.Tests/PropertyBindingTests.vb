@@ -39,14 +39,5 @@
         Assert.AreEqual(src.ObservableProperty.Value, dst.Value)
     End Sub
 
-    <Test> Public Sub Binding_ObservableToBasicPropertyByExpression_init()
-        Dim src As New DummyClass(Of String)("abc")
-        Dim dst As New DummyNotify(Of String)("def")
 
-        Dep.Bindings.Add(src.ObservableProperty, dst, Function(m As DummyNotify(Of String)) m.Value)
-
-        Assert.AreEqual(src.ObservableProperty.Value, dst.Value)
-    End Sub
-
-End Class
 End Class
