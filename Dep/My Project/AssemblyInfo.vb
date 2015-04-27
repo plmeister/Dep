@@ -10,7 +10,7 @@ Imports System.Reflection
 
 <Assembly: AssemblyTitle("Dep")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyCompany("Scott Lees")> 
 <Assembly: AssemblyProduct("Dep")> 
 <Assembly: AssemblyCopyright("")> 
 <Assembly: AssemblyTrademark("")> 
