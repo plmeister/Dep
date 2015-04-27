@@ -10,9 +10,9 @@ Imports System.Reflection
 
 <Assembly: AssemblyTitle("Dep")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Hewlett-Packard")> 
+<Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("Dep")> 
-<Assembly: AssemblyCopyright("Copyright © Hewlett-Packard 2015")> 
+<Assembly: AssemblyCopyright("")> 
 <Assembly: AssemblyTrademark("")> 
 <Assembly: NeutralResourcesLanguage("en")>
 
